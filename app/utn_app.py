@@ -1,40 +1,41 @@
 from funciones_utn import (
-
+    mostrar_menu
 )
 
 from validaciones_utn import (
-
+    validar_opcion
 )
 
+from UTN_Heroes_Dataset.utn_funciones import play_sound, clear_console
 
+from UTN_Heroes_Dataset.utn_matrices import matriz_data_heroes
 
-def utn_heroes_app(lista_nombres, lista_identidades, lista_generos, lista_poderes, lista_alturas, debug):
+def utn_heroes_app():
 
     while True:
         mostrar_menu()
         opcion = validar_opcion(1, 13)
-        play_sound()
         match opcion:
             case 1:
-                utn_mostrar_nombres_heroes(lista_nombres)
+                pass
             case 2:
-                utn_mostrar_identidades_heroes(lista_identidades)
+                pass
             case 3:
-                utn_mostrar_heroe_mayor_altura(lista_nombres, lista_identidades, lista_generos, lista_poderes, lista_alturas, debug)
+                pass
             case 4:
-                utn_mostrar_heroes_mas_fuertes(lista_nombres, lista_identidades, lista_generos, lista_poderes, lista_alturas)
+                pass
             case 5:
-                utn_filtrar_heroes_genero(lista_nombres, lista_identidades, lista_generos, lista_poderes, lista_alturas, "Femenino")
+                pass
             case 6:
-                utn_filtrar_heroes_genero(lista_nombres, lista_identidades, lista_generos, lista_poderes, lista_alturas, "Masculino")
+                pass
             case 7:
-                utn_filtrar_heroes_genero(lista_nombres, lista_identidades, lista_generos, lista_poderes, lista_alturas, "No-Binario")
+                pass
             case 8:
-                utn_mostrar_heroes_poder_superior_promedio(lista_nombres, lista_identidades, lista_generos, lista_poderes, lista_alturas)
+                pass
             case 9:
-                utn_mostrar_heroes_mas_debiles(lista_nombres, lista_identidades, lista_generos, lista_poderes, lista_alturas)
+                pass
             case 10:
-                utn_ordenar_heroes_poder_ascendente(lista_nombres, lista_identidades, lista_generos, lista_poderes, lista_alturas)
+                pass
             case 11:
                 pass
             case 12:
@@ -42,7 +43,8 @@ def utn_heroes_app(lista_nombres, lista_identidades, lista_generos, lista_podere
             case 13:
                 print("Saliendo...")
                 break
-            case _:
-                print('Opcion no valida')
+        play_sound()
+        clear_console()
 
-        limpiar_pantalla()
+if __name__  == "__main__": 
+    utn_heroes_app(matriz_data_heroes)

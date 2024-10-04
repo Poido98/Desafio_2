@@ -10,17 +10,14 @@ def recorrer_matriz(matriz_data_heroes) -> None:
 
 def mostrar_heroes_femeninos(matriz_data_heroes) -> None:
 
-    heroes_femeninos = []
-    for heroe in matriz_data_heroes:
-        if heroe[3] == "Femenino":
-            heroes_femeninos.append(heroe)
-    
-    recorrer_matriz(heroes_femeninos)
+    for columna in range(len(matriz_data_heroes[0])):
+        mujeres = matriz_data_heroes[3][columna]
+        if mujeres == 'Femenino':
+            for fila in range(len(matriz_data_heroes)):
+                print(matriz_data_heroes[fila][columna])
+                print('////////////////')
 
-    # for fila in range(len(matriz_data_heroes)):
-    #     for columna in range(len(matriz_data_heroes[fila])):
-    #         dato = matriz_data_heroes[fila][columna]
-    #         print(f'Fila: {fila} | Columna: {columna} | Dato: {dato}')
+
 
 
 
